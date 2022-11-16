@@ -3,11 +3,11 @@ import pandas as pd
 from typing import Optional
 
 screen_type = 'ip'  # 'ip', 'pa'
-screen_name = 'PDL1_IFNg'
+screen_name = 'ABC-WNT'
 
 select_by = 'gene'  # Either 'gene' or 'position'
 gene = 'CD274'  # Gene symbol in refseq, eg 'CD274'
-position = 'chr9:5,450,503-5,470,567' # Position, eg 'chr9:5,450,503-5,470,567'
+position = 'chr9:5,450,503-5,470,567'  # Position, eg 'chr9:5,450,503-5,470,567'
 
 data_path = '/media/data/nas_scratch/guizela/data'
 
@@ -17,7 +17,7 @@ if screen_type == 'ip':
 elif screen_type == 'pa':
     ins_dir = f'{data_path}/screen-insertions_activating'
 refseq_dir = f'{data_path}/refseq-processed'
-#%%
+
 
 def read_insertions(data_dir: str, screen_name: str, chrom: str, start: int,
                     end: int, assembly: str = 'hg38', trim_length: int = 50,
@@ -82,7 +82,8 @@ def get_gene_position(gene: str, refseq: pd.DataFrame) -> tuple:
 
 
 def get_insertions(data_dir: str, screen_name: str, select_by: str = 'gene',
-                   gene: str = None, position: str = None) -> pd.DataFrame:
+                   gene: str = None, position: str = None,
+                   screen_type: str = 'ip') -> pd.DataFrame:
 
     if select_by == 'gene':
         if gene is None:
@@ -112,7 +113,8 @@ def get_insertions(data_dir: str, screen_name: str, select_by: str = 'gene',
 
 
 insertions = get_insertions(ins_dir, screen_name, select_by=select_by,
-                            gene=gene, position=position)
+                            gene=gene, position=position,
+                            screen_type=screen_type)
 
 insertions
 
