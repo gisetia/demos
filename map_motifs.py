@@ -12,7 +12,6 @@ for motif in motifs:
     sp.run(cmd, shell=True)
 
 chroms = [str(x) for x in range(1, 23)] + ['X', 'Y']
-bed_list = list()
 for motif in motifs:
     bowtie = pd.read_csv(f'{save_dir}/{motif}_bowtie.tsv', sep='\t',
                          header=None).rename(columns={2: 'chrom', 1: 'strand',
