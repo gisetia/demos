@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <!-- <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-2.4.2.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-2.4.2.min.css" type="text/css" /> -->
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-2.4.2.min.js"></script>
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-2.4.2.min.js"></script>
+        <script type="text/javascript" src="http://cdn.bokeh.org/bokeh/release/bokeh-api-2.4.2.min.js"></script>
+
+    </head>
+    <body>
+        <div id="plot">
+            {{ div|safe }}
+            {{ script|safe }}
+        </div>
+    </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+    <style>
+            div.scrollable {
+                overflow: auto;
+            }
+        </style>
+        <meta charset="utf-8">
+        <title>{{ title if title else "Bokeh Plot" }}</title>
+        {{ bokeh_css | safe }}
+        {{ bokeh_js | safe }}
+    </head>
+    <body>
+        {{ plot_div | safe }}
+        {{ plot_script | safe }}
+    </body>
+</html> -->
