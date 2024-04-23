@@ -11,21 +11,28 @@ crispr = pd.read_parquet('gs://gisetia-ccle/processed_data/cell_cols/'
 
 #%%
 # Get UMAP using pearson correlation as similarity measure between genes
-reducer = umap.UMAP(metric='correlation',n_neighbors=2, min_dist=0.1)
+reducer = umap.UMAP(metric='correlation', n_neighbors=2,
+                    min_dist=0, random_state=0,)
 embedding = reducer.fit_transform(crispr.values)
+
+reducer_plot = umap.UMAP(metric='correlation',
+                         n_neighbors=2, min_dist=.6, random_state=0,)
+embedding_plot = reducer.fit_transform(crispr.values)
 
 #%%
 # Cluster the result from UMAP using DBSCAN (parameters depend on how the data
 # looks like. eps should be similar to the distance between points in the
 # clusters. min_samples is the minimum number of genes a cluster should
 # contain)
-db = DBSCAN(eps=.1, min_samples=2).fit(embedding)
+db = DBSCAN(eps=0.1, min_samples=2).fit(embedding)
 labels = db.labels_
 
 # Organize data into dataframe
 umap_data = pd.DataFrame({'genes': crispr.index,
                           'x_coord': [x[0] for x in embedding],
-                          'y_coord': [x[1] for x in embedding]})
+                          'y_coord': [x[1] for x in embedding],
+                          'x_coord_plot': [x[0] for x in embedding_plot],
+                          'y_coord_plot': [x[1] for x in embedding_plot], })
 # Add id of clusters found by DBSCAN
 umap_data['cluster_id'] = db.labels_
 
