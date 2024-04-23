@@ -47,8 +47,10 @@ ont_df['annots'] = ont_df['annots'].apply(lambda x: list(x))
 ont_df = ont_df.query('size > 0')
 ont_df.to_csv(f'{save_dir}/ontology.csv.gz', compression='gzip')
 
-# Get table with genes and the terms to which they are annotated
+# Get genes and the terms to which they are annotated
 gene_terms = ont_df.explode('annots').groupby('annots')['term_id'].agg(list)
-gene_terms.to_csv(f'{save_dir}/gene_terms.csv.gz', compression='gzip')
+with open(f'{save_dir}/gene_terms.json', 'w') as outfile:
+    json.dump(gene_terms.to_dict(), outfile)
+# gene_terms.to_csv(f'{save_dir}/gene_terms.csv.gz', compression='gzip')
 
 # %%

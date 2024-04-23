@@ -3,7 +3,7 @@ import pandas as pd
 from typing import Optional, Set, List, Union
 import random
 import numpy as np
-import goenrichclone as goenrich
+import goenrich
 
 random.seed(1)
 np.random.seed(1)
@@ -51,8 +51,7 @@ def build_ontology(obo_file: str,
 
 @check_namespace
 def read_gaf(gaf_file: str,
-             namespace: Optional[str] = None,
-             qualifiers: Optional[bool] = None) -> pd.DataFrame:
+             namespace: Optional[str] = None) -> pd.DataFrame:
     '''Returns pandas dataframe containing the info from gaf file, for each
     or all of the three GO branches. Branch is set with 'namespace', which can
     be 'p' for biological process, 'f' for molecular function, 'c' for cellular
@@ -71,12 +70,22 @@ def read_gaf(gaf_file: str,
     gaf_df = pd.read_csv(gaf_file,
                          sep='\t',
                          header=None,
-                         comment='!',
-                         names=column_names)
+                         comment='!')
+    gaf_df.columns = column_names
+
+    qualifiers = ['enables', 'located_in', 'involved_in', 'part_of',
+                  'is_active_in', 'colocalizes_with',
+                  'acts_upstream_of_or_within', 'contributes_to',
+                  'acts_upstream_of_positive_effect', 'acts_upstream_of',
+                  'acts_upstream_of_negative_effect',
+                  'acts_upstream_of_or_within_positive_effect',
+                  'acts_upstream_of_or_within_negative_effect']
 
     # keep only rows without qualifiers
-    if not qualifiers:
-        gaf_df = gaf_df[gaf_df['qualifier'].isnull()]
+    # if not qualifiers:
+    #     gaf_df = gaf_df[gaf_df['qualifier'].isnull()]
+
+    gaf_df = gaf_df.query('qualifier in @qualifiers')
 
     namespace = namespace.capitalize()
 
