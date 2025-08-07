@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 90 90">
+  <!-- Generator: Adobe Illustrator 29.6.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 207)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #f2edeb;
+      }
+
+      .st1 {
+        fill: #cc69a6;
+      }
+
+      .st2 {
+        fill: #4798d3;
+      }
+
+      .st3 {
+        fill: #fff;
+      }
+
+      .st4 {
+        fill: #fab700
+      }
+
+      .st5 {
+        fill: #ff8300;
+      }
+
+      .st6 {
+        fill: #003a70;
+      }
+
+      .st7 {
+        fill: #82ba26;
+      }
+    </style>
+  </defs>
+  <path id="Shape" class="st0" d="M44.92,89.84C20.21,89.84,0,69.63,0,44.92S20.21,0,44.92,0s44.92,20.21,44.92,44.92-20.22,44.92-44.92,44.92Z"/>
+  <rect id="Rectangle-path" class="st3" x="52.1" y="50.35" width="7.16" height="10.53" transform="translate(-23.02 55.66) rotate(-45)"/>
+  <path id="Shape1" data-name="Shape" class="st6" d="M56.85,63.31c-.42,0-.7-.14-.98-.42l-7.58-7.44c-.56-.56-.56-1.4,0-1.97l5.05-5.05c.56-.56,1.4-.56,1.97,0l7.44,7.44c.56.56.56,1.4,0,1.97l-5.05,5.05c-.14.28-.56.42-.84.42ZM51.38,54.47l5.47,5.47,3.09-3.09-5.47-5.47-3.09,3.09Z"/>
+  <path id="Shape2" data-name="Shape" class="st7" d="M63.73,54.89l-8.7,8.7,18.95,21.9c3.09,3.65,8.7,3.79,12.07.42s3.23-8.98-.42-12.07l-21.9-18.95Z"/>
+  <path id="Shape3" data-name="Shape" class="st6" d="M72.86,86.47l-18.95-21.76c-.42-.56-.42-1.4,0-1.97l8.7-8.7c.56-.56,1.4-.56,1.97,0l21.9,18.95c4.21,3.65,4.49,10.25.42,14.18-3.93,3.79-10.39,3.51-14.04-.7ZM56.85,63.73l18.11,20.92c2.53,2.95,7.16,3.23,10.11.28,2.81-2.81,2.67-7.44-.28-10.11l-21.06-17.97-6.88,6.88Z"/>
+  <circle id="Oval" class="st3" cx="34.39" cy="34.39" r="28.64"/>
+  <path id="Shape4" data-name="Shape" class="st6" d="M34.39,64.43c-16.71,0-30.18-13.48-30.18-30.04S17.69,4.35,34.25,4.35s30.18,13.48,30.18,30.18-13.48,29.9-30.04,29.9ZM34.39,7.02c-7.3,0-14.18,2.81-19.37,8-5.19,5.19-8,12.07-8,19.37,0,15.02,12.21,27.37,27.23,27.37v1.4-1.4c15.02,0,27.23-12.21,27.23-27.23.14-15.3-12.07-27.51-27.09-27.51Z"/>
+  <path id="Shape5" data-name="Shape" class="st2" d="M34.39,56.71c-12.35,0-22.46-10.11-22.46-22.46s10.11-22.46,22.46-22.46,22.46,10.11,22.46,22.46c-.14,12.49-10.11,22.46-22.46,22.46Z"/>
+  <path id="Shape6" data-name="Shape" class="st3" d="M49.41,35.8c-.84,0-1.4-.56-1.4-1.4,0-7.44-6.18-13.62-13.62-13.62-.84,0-1.4-.56-1.4-1.4s.56-1.4,1.4-1.4c9.12,0,16.42,7.44,16.42,16.42,0,.7-.7,1.4-1.4,1.4Z"/>
+  <rect id="Rectangle-path1" data-name="Rectangle-path" class="st6" x="66.32" y="66.23" width="2.81" height="2.81" transform="translate(-27.99 67.7) rotate(-45)"/>
+  <rect id="Rectangle-path2" data-name="Rectangle-path" class="st6" x="72.15" y="72.15" width="2.81" height="2.81" transform="translate(-30.47 73.52) rotate(-44.98)"/>
+  <rect id="Rectangle-path3" data-name="Rectangle-path" class="st6" x="77.98" y="78.08" width="2.81" height="2.81" transform="translate(-32.95 79.41) rotate(-45)"/>
+</svg>
